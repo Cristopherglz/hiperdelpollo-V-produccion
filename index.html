@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#eee853" />
+    <meta name="background-color" content="#FFFEF5" />
+    <meta name="description" content="Sorteos y Predicciones del Mundial 2026 - Participá y ganá premios increíbles con Hiper del Pollo" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Hiper del Pollo" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="Hiper del Pollo" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json" />
+    
+    <!-- Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="./icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="./icon-512x512.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="./icon-192x192.png" />
+    <link rel="apple-touch-icon" sizes="512x512" href="./icon-512x512.png" />
+    
+    <!-- Splash Screen for iOS -->
+    <link rel="apple-touch-startup-image" href="./icon-512x512.png" />
+    
+    <title>Hiper del Pollo</title>
+    
+    <style>
+      /* Prevent pull-to-refresh and overscroll on mobile */
+      html, body {
+        overscroll-behavior: none;
+        touch-action: pan-y;
+      }
+      
+      /* Hide scrollbar but keep functionality */
+      ::-webkit-scrollbar {
+        width: 0px;
+        background: transparent;
+      }
+    </style>
+    <script type="module" crossorigin src="./assets/index-B5zbADRN.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Cb06Msqu.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- PWA Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registrado:', registration.scope);
+            })
+            .catch((error) => {
+              console.log('SW error:', error);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>
